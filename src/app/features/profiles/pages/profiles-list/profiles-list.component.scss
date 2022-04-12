@@ -1,0 +1,63 @@
+@import "../../../../styles/variables.scss";
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: $primary-color;
+  padding: 0 $main-content-padding $main-content-padding;
+}
+
+.search-input-container {
+  position: relative;
+}
+
+.search-input {
+  width: 50rem;
+  border-radius: 2px;
+  margin-right: 5px;
+  height: 3rem;
+  padding-left: 3rem;
+}
+
+.input-icon {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+}
+
+.search-action {
+  border-radius: 2px;
+  margin: 0 5px;
+  width: 4rem;
+  height: 3rem;
+  background-color: #2076a2;
+  &:hover {
+    background-color: #144e6b;
+  }
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  table {
+    flex-grow: 1;
+  }
+}
+
+.image-cell {
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: $image-back-ground-color;
+}
+
+.mat-header-cell.text-align-end{
+  text-align: end;
+  padding-right: 40px;
+}
+
+.no-data-msg {
+  text-align: center;
+  font-weight: 600;
+}

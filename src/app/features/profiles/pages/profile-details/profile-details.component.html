@@ -1,0 +1,201 @@
+<div class="container">
+  <div class="header">
+    <span class="header-title">Profile:</span>
+    <div class="img-container">
+      <img class="icon-image" src="/assets/icons/linkedin-circled.svg" />
+      <img class="main-image" [src]="profileData.photo" />
+    </div>
+    <span class="header-title">{{ profileData.first_name }} {{ profileData.last_name }}</span>
+  </div>
+  <div class="content">
+    <div class="side-container">
+      <div class="nav-container"></div>
+      <div class="side-card">
+        <h3 class="side-title"> Quick Facts </h3>
+        <div class="side-content">
+          <div class="side-subtitle">
+            <p>Status</p>
+            <button mat-button><mat-icon class="primary">launch</mat-icon></button>
+          </div>
+          <div class="side-data">
+            <div class="account-icon"><mat-icon>account_box</mat-icon></div>
+            <div class="mx-2">
+              <p>ID: SH051545</p>
+              <p>Tier: Gold</p>
+              <p>Pts: 125,024</p>
+            </div>
+          </div>
+        </div>
+        <div class="side-content">
+          <div class="side-subtitle">
+            <p>Top 3 Facts</p>
+            <button mat-button><mat-icon class="primary">launch</mat-icon></button>
+          </div>
+          <div class="side-data">
+            <div><mat-icon>info</mat-icon></div>
+            <div class="mx-2">
+              <p>Suite Room</p>
+              <p>King Bed</p>
+              <p>Highest Floor</p>
+            </div>
+          </div>
+        </div>
+        <div class="side-content">
+          <div class="side-subtitle">
+            <p>RFM Score</p>
+            <button mat-button><mat-icon class="primary">launch</mat-icon></button>
+          </div>
+          <div class="side-data">
+            <div><mat-icon>info</mat-icon></div>
+            <div class="mx-2"><p>R: 70%</p></div>
+            <div class="mx-2"><p>F: 50%</p></div>
+            <div class="mx-2"><p>M: 90%</p></div>
+          </div>
+        </div>
+        <div class="side-content">
+          <div class="side-subtitle">
+            <p>Other Facts</p>
+            <button mat-button><mat-icon class="primary">launch</mat-icon></button>
+          </div>
+          <div class="side-data flex-column">
+            <div class="flex-row">
+              <div><mat-icon class="side-icon">date_range</mat-icon></div>
+              <label class="card-label">Total Stays:</label> 
+              <p class="card-value">24</p>
+            </div>
+            <div class="flex-row">
+              <div><img class="side-icon" src="/assets/icons/night.png"></div>
+              <label class="card-label">Nights</label> 
+              <p class="card-value">32</p>
+            </div>
+            <div class="flex-row">
+              <div><img class="side-icon" src="/assets/icons/bed.png"></div>
+              <label class="card-label">Avg. Stays</label> 
+              <p class="card-value">1.33 nights</p>
+            </div>
+            <div class="flex-row">
+              <div><mat-icon class="side-icon">event</mat-icon></div>
+              <label class="card-label">Last visit</label> 
+              <p class="card-value">2018-08-15</p>
+            </div>
+            <div class="flex-row">
+              <div><img class="side-icon" src="/assets/icons/money.png"></div>
+              <label class="card-label">Lifetime Value</label> 
+              <p class="card-value">$3084.29</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="nav-container">
+        <mat-tab-group (selectedTabChange)="onSelectedTabChange($event)" animationDuration="0ms">
+          <mat-tab  label="Profile Detail">
+          </mat-tab>
+          <mat-tab label="Profile ID's"></mat-tab>
+          <mat-tab label="Activity Timeline"></mat-tab>
+        </mat-tab-group>
+      </div>
+      <div class="card-container">
+        <div class="main-card">
+          <div class="inner-card">
+              <h3 class="content-title">{{selectedTab?.tab.textLabel ||'Profile Detail' }}</h3>
+              <div class="card-details">
+                <ng-container *ngIf="!selectedTab || selectedTab.index==0">
+                  <div class="flex-row justify-content-space-between align-items-center">
+                    <div class="flex-row">
+                      <label class="card-label">Prefix</label> 
+                      <p class="card-value">{{profileData.prefix}}</p>
+                    </div>
+                    <div>
+                      <button mat-button><mat-icon class="secondary">edit</mat-icon></button>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="flex-row justify-content-space-between align-items-center">
+                    <div class="flex-row">
+                      <label class="card-label">First Name</label> 
+                      <p class="card-value">{{profileData.first_name}}</p>
+                    </div>
+                    <div>
+                      <button mat-button><mat-icon class="secondary">edit</mat-icon></button>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="flex-row justify-content-space-between align-items-center">
+                    <div class="flex-row">
+                      <label class="card-label">Last Name</label> 
+                      <p class="card-value">{{profileData.last_name}}</p>
+                    </div>
+                    <div>
+                      <button mat-button><mat-icon class="secondary">edit</mat-icon></button>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="flex-row justify-content-space-between align-items-center">
+                    <div class="flex-row">
+                      <label class="card-label">Suffix</label> 
+                      <p class="card-value">{{profileData.suffix}}</p>
+                    </div>
+                    <div>
+                      <button mat-button><mat-icon class="secondary">edit</mat-icon></button>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="flex-row justify-content-space-between align-items-center">
+                    <div class="flex-row">
+                      <label class="card-label">Loyality Member ID</label> 
+                      <p class="card-value">{{profileData.loyalty_member_id}}</p>
+                    </div>
+                    <div>
+                      <button mat-button><mat-icon class="secondary">edit</mat-icon></button>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="flex-row justify-content-space-between align-items-center">
+                    <div class="flex-row">
+                      <label class="card-label">Phone</label> 
+                      <p class="card-value">{{profileData.phone}}</p>
+                    </div>
+                    <div>
+                      <button mat-button><mat-icon class="secondary">edit</mat-icon></button>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="flex-row justify-content-space-between align-items-center">
+                    <div class="flex-row">
+                      <label class="card-label">Address</label> 
+                      <p class="card-value">{{profileData.address}}</p>
+                    </div>
+                    <div>
+                      <button mat-button><mat-icon class="secondary">edit</mat-icon></button>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="flex-row justify-content-space-between align-items-center">
+                    <div class="flex-row">
+                      <label class="card-label">Birthdate</label> 
+                      <p class="card-value">{{profileData.birthdate}}</p>
+                    </div>
+                    <div>
+                      <button mat-button><mat-icon class="secondary">edit</mat-icon></button>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="flex-row justify-content-space-between align-items-center">
+                    <div class="flex-row">
+                      <label class="card-label">Language Preference</label> 
+                      <p class="card-value">English</p>
+                    </div>
+                    <div>
+                      <button mat-button><mat-icon class="secondary">edit</mat-icon></button>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

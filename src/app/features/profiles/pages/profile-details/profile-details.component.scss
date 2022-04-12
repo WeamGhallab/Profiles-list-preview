@@ -1,0 +1,147 @@
+@import "../../../../styles/variables.scss";
+
+.header-title {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.img-container {
+  position: relative;
+}
+
+.icon-image {
+  position: absolute;
+  bottom: 35px;
+  right: 10px;
+  width: 20px;
+}
+
+.main-image {
+  margin: 0 0.75rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: $image-back-ground-color;
+}
+
+.content {
+  display: flex;
+  padding: 0;
+}
+
+.side-container {
+  display: flex;
+  flex-shrink: 0;
+  width: 18rem;
+  padding-bottom: $card-content-padding;
+  background-color: $back-ground-color;
+
+  .nav-container {
+    width: $main-content-padding;
+  }
+}
+
+.side-card {
+  flex-grow: 1;
+  background-color: $light-color;
+  border-radius: $card-border-radius;
+  box-shadow: $box-shadow;
+  padding: $card-content-padding;
+  position: relative;
+}
+
+.side-title {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.side-content {
+  margin-bottom: 1.5rem;
+  .mat-button {
+    padding: 0;
+    min-width: 36px;
+  }
+}
+
+.side-subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $border-color;
+}
+
+.side-data {
+  margin: 1rem 0;
+  display: flex;
+  font-size: 0.75rem;
+  .account-icon .mat-icon {
+    color: #d1ab40;
+  }
+  .card-label {
+    width: 5rem;
+  }
+  .side-icon {
+    opacity: 0.5;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: $back-ground-color;
+}
+
+.nav-container {
+  flex-shrink: 0;
+  height: $actions-height;
+  background-color: $primary-color;
+}
+
+.card-container {
+  flex-grow: 1;
+  padding: $card-content-padding;
+}
+
+.main-card {
+  padding: $card-content-padding;
+  max-width: 60rem;
+  border-radius: $card-border-radius;
+}
+
+.inner-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: $card-content-padding;
+  background-color: $back-ground-color;
+  box-shadow: $box-shadow;
+  border-radius: $card-border-radius;
+}
+
+.content-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.card-details {
+  background-color: $light-color;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+  padding: $card-content-padding 0;
+  border-radius: $card-border-radius;
+
+  .mat-button {
+    margin: 0 0.5rem;
+    line-height: 1rem;
+  }
+}
+
+.card-label {
+  width: 15rem;
+  margin: 0 1rem;
+}
+
+.card-value {
+  font-weight: bold;
+}
