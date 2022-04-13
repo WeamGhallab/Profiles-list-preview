@@ -1,6 +1,8 @@
-# ProfilesPreview
+# Description
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+The user opens the search page and starts searching for profiles by first name, last name, email, this will filter the list of profiles returned from the API.
+When the user clicks on a profile row, the app will route to the profile details page.
+Profile details page have tabs, the default open tab is the profile detail,
 
 ## Development server
 
